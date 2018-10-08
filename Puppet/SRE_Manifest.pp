@@ -30,5 +30,6 @@ acl {
 
 file {
   'C:\SRE_Task\Maintenance\Logfile-Maintenance.ps1':
-    source => 'https://raw.githubusercontent.com/ObsidianPhoenix/VitalityEnhancer/master/README.md'
+    source => 'https://raw.githubusercontent.com/ObsidianPhoenix/SRE.Task/master/MaintenanceScript/Logfile-Maintenance.ps1',
+    ensure => file
 }
