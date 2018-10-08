@@ -8,7 +8,7 @@ $retentionDays = 30
 $logDirectory = "C:\SRE_Task\Logs"
 $minimumFreeSpacePercentage = 0.8
 
-$alertEmailAddress = "fergal.reilly@bedegaming.com"
+$alertEmailAddress = "servicedelivery@bedegaming.com"
 $alertSmtpServer = "1.1.1.1"
 
 function Remove-FilesOutwithRetentionPolicy() {
