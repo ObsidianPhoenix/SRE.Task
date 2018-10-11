@@ -1,6 +1,8 @@
+$sre_GroupName = 'SRE_TestGroup'
+
 #Create the user and the group
 group {
-  'SRE_TestGroup':
+  $sre_GroupName:
     ensure    => present,
 }
 
@@ -8,7 +10,7 @@ user {
   'SRE_TestUser':
     ensure    => present,
     password => 'letmein123',
-    groups    => 'SRE_TestGroup'
+    groups    => $sre_GroupName
 }
 
 #Create the Directories with the appropriate permissions
@@ -32,7 +34,7 @@ file {
 acl {
   $sre_directories:
     permissions => [
-        { identity => 'SRE_TestGroup', rights => ['read', 'write', 'modify'] }
+        { identity => $sre_GroupName, rights => ['read', 'write', 'modify'] }
       ]
 }
 
